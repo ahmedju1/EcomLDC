@@ -1,4 +1,18 @@
 # EcomLDC
+Domain: Core entities, rules, events.
+
+Application: UseCases, DTOs, contracts.
+
+Infrastructure: EF Core + repositories.
+
+SharedKernel: Shared base classes.
+
+Api: Controllers (entry point).
+
+Tests: Unit & Integration tests.
+
+
+
 
 Ecom.sln
 │
