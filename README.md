@@ -20,6 +20,7 @@ Tests: Unit & Integration tests.
 
 ## 📂 Project Structure
 
+
 Ecom.sln
 │
 ├─ src/
@@ -77,8 +78,7 @@ Ecom.sln
 └─ Ecom.IntegrationTests/
 └─ ProductRepositoryTests.cs
 
-markdown
-Copy code
+
 
 ---
 
