@@ -1,4 +1,8 @@
-# EcomLDC
+# 🛒 Ecom - Clean Architecture Project
+
+This project is a sample **ASP.NET Core Web API** that demonstrates **Clean Architecture** principles, **OOP**, and **SOLID** in practice.  
+
+---
 Domain: Core entities, rules, events.
 
 Application: UseCases, DTOs, contracts.
@@ -11,6 +15,8 @@ Api: Controllers (entry point).
 
 Tests: Unit & Integration tests.
 
+
+---
 
 ## 📂 Project Structure
 
@@ -70,4 +76,49 @@ Ecom.sln
 │ └─ OrderTests.cs
 └─ Ecom.IntegrationTests/
 └─ ProductRepositoryTests.cs
+
+markdown
+Copy code
+
+---
+
+## 🧩 Layer Responsibilities
+
+- **Ecom.Domain**  
+  Core business logic. Contains:
+  - Entities (`Product`, `Order`, `OrderItem`)
+  - ValueObjects (`Money`)
+  - Business Rules (`OrderMustHaveAtLeastOneItemRule`)
+  - Domain Events (`OrderPlacedEvent`)
+
+- **Ecom.Application**  
+  Application logic (use cases, contracts, DTOs). Contains:
+  - Interfaces (`IProductRepository`, `IOrderRepository`, `IUnitOfWork`)
+  - DTOs (`ProductDto`, `OrderDto`)
+  - UseCases (`GetProductsHandler`, `CreateOrderHandler`)
+
+- **Ecom.Infrastructure**  
+  Technical details (EF Core, database). Contains:
+  - `EcomDbContext` and configurations
+  - Repositories implementing application interfaces
+  - UnitOfWork implementation
+
+- **Ecom.SharedKernel**  
+  Common reusable building blocks:
+  - `BaseEntity` (Id + DomainEvents)
+  - `Result` (Success/Failure wrapper)
+  - `DomainEvent` base class
+
+- **Ecom.Api**  
+  Presentation layer (entry point for clients). Contains:
+  - Controllers (`ProductsController`, `OrdersController`)
+  - API DTOs (`OrderRequest`)
+  - `Program.cs` (startup and DI configuration)
+
+- **Tests**  
+  Ensures correctness and reliability:
+  - UnitTests: Domain and Application logic
+  - IntegrationTests: Repositories and API endpoints
+
+---
 
