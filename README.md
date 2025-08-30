@@ -24,11 +24,17 @@ Tests: Unit & Integration tests.
 Ecom.sln
 │
 ├─ src/
+
 │ ├─ Ecom.Domain/
+
 │ │ ├─ Entities/
+
 │ │ │ ├─ Product.cs
+
 │ │ │ ├─ Order.cs
+
 │ │ │ └─ OrderItem.cs
+
 │ │ ├─ ValueObjects/
 │ │ │ └─ Money.cs
 │ │ ├─ Rules/
