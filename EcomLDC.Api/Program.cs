@@ -1,4 +1,5 @@
-using EcomLDC.Application.UseCases;
+using EcomLDC.Application.UseCases.Orders.Commands;
+using EcomLDC.Application.UseCases.Products;
 using EcomLDC.Infrastructure;
 using EcomLDC.Infrastructure.Repositories;
 
@@ -30,6 +31,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

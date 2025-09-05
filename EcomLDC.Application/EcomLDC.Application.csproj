@@ -11,4 +11,9 @@
     <ProjectReference Include="..\EcomLDC.SharedKernel\EcomLDC.SharedKernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CommanDataModel\" />
+    <Folder Include="UseCases\Orders\Query\" />
+  </ItemGroup>
+
 </Project>

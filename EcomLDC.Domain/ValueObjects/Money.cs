@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace EcomLDC.Domain.ValueObjects
 {
-    public record Money(decimal Amount, string Currency)   // OOP: record (Immutable)
+    // Encapsulation
+    public record Money(decimal Amount, string Currency)   //  record (Immutable)
     {
+        //Encapsulation
+        public static Money zero (string currency) => new(0, currency);
+
     }
 }

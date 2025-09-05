@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EcomLDC.Infrastructure.Interfaces
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
+        Task<int> SaveChangesAsync();
     }
 }
