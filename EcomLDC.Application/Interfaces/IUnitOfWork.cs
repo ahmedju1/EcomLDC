@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EcomLDC.Infrastructure.Interfaces
+namespace EcomLDC.Application.Interfaces
 {
+
     public interface IUnitOfWork
     {
-        Task<int> SaveChangesAsync();
+        Task<int> SaveChangesAsync(CancellationToken ct = default);
     }
 }

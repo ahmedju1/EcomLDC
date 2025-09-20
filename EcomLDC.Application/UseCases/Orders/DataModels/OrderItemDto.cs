@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace EcomLDC.Application.UseCases.Orders.DataModels
 {
-    //one product in the order
-    public class OrderItemDto(Guid ProductId , int Quantity); //decouple Domain from API
-   
+    public record OrderItemDto(string ProductName, decimal UnitPrice, int Quantity, decimal LineTotal); // LineTotal hya el total bta3 el item dah (UnitPrice * Quantity)
+
 }

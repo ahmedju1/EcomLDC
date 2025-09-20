@@ -12,8 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CommanDataModel\" />
-    <Folder Include="UseCases\Orders\Query\" />
+    <Folder Include="Services\" />
+    <Folder Include="UseCases\Orders\DataModels\Place\" />
+    <Folder Include="UseCases\Products\Commands\" />
+    <Folder Include="UseCases\Users\Register\DataModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
   </ItemGroup>
 
 </Project>

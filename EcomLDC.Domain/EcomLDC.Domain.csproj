@@ -10,4 +10,10 @@
     <ProjectReference Include="..\EcomLDC.SharedKernel\EcomLDC.SharedKernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Rules\" />
+    <Folder Include="ValueObjects\" />
+  </ItemGroup>
+
 </Project>

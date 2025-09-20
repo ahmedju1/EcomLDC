@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace EcomLDC.SharedKernel
 {
-    public abstract class DomainEvent   // OOP: Abstraction  
+   
+    public abstract class DomainEvent : IDomainEvent
     {
+        public DateTime OccurredOnTime { get; } = DateTime.UtcNow;
     }
 }
